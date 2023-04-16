@@ -90,12 +90,12 @@ if (isset($_POST['log'])) {
 
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
-        printf(
+        // printf(
 
-          $row["dob"]
+        //   $row["dob"]
 
 
-        );
+        // );
 
 
         session_start();
