@@ -185,7 +185,7 @@ if (isset($_POST['log'])) {
           </div>
           <button name="log" class="btn btn-primary d-flex w-100 justify-content-center">Log In</button>
           <p class="text-white">New here<span>
-              <button name='Sign up' class="btn btn-primary d-flex w-100 justify-content-center"><a class="text-white text-decoration-none" href="Reg.php">Register</a></button>
+              <button name='Sign up' class="btn btn-primary d-flex w-100 justify-content-center"><a class="text-white text-decoration-none"><a href="Reg.php">Register</a></button>
             </span></p>
         </div>
       </div>
