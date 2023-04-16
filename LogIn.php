@@ -17,9 +17,9 @@ if (isset($_POST['log'])) {
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
         header("Location: /Internee/StudentLandingPage.php");
-        printf(
-          $row["dob"]
-        );
+        // printf(
+        //   $row["dob"]
+        // );
         session_start();
         //storing internee variables in a session for easy retrieval
         $_SESSION['user_name'] = $row['fname'];
@@ -43,8 +43,8 @@ if (isset($_POST['log'])) {
     mysqli_free_result($result);
   }
   if ($role == 'University SuperVisor') {
-    # code...
-    echo 'hello';
+    // # code...
+    // echo 'hello';
 
     $sql = ("SELECT * FROM `unsupervisor` WHERE email ='$email' and password='$pass'");
     // echo $sql['fname'];
@@ -52,12 +52,12 @@ if (isset($_POST['log'])) {
 
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
-        printf(
+        // printf(
 
-          $row["dob"]
+        //   $row["dob"]
 
 
-        );
+        // );
 
 
         session_start();
