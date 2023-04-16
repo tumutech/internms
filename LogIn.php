@@ -86,7 +86,7 @@ if (isset($_POST['log'])) {
         $_SESSION['gender'] = $row['gender'];
         $_SESSION['regno'] = $row['cpregno'];
         //echo("logged in as company");
-        header("Location: cpsuperv/SupLandingPage.php");
+        header("Location: cpdashboard");
         exit();
       }
     } else {
