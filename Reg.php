@@ -15,7 +15,7 @@ if (isset($_POST['register'])) {
 
   if ($role == 'Internee') {
     // Create a MySQLi object
-$mysqli = new mysqli("localhost", "betteras_intern", "betteras_logbook", "betteras_logbook");
+$mysqli = new mysqli("82.208.22.160", "betteras_intern", "betteras_logbook", "betteras_logbook");
 
 // Check for errors
 if ($mysqli->connect_errno) {
