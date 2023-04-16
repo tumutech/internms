@@ -35,7 +35,7 @@ if (isset($_POST['log'])) {
         $_SESSION['unsupervisor'] = $row['unsuperv'];
         $_SESSION['cpsupervisor'] = $row['cpsuperv'];
         $_SESSION['image'] = $row['image'];
-        header("Location: idashboard");
+        header("Location: Internee/StudentLandingPage.php");
         exit();
       }
     } else {
@@ -60,7 +60,7 @@ if (isset($_POST['log'])) {
         $_SESSION['id'] = $row['idInternee'];
         $_SESSION['gender'] = $row['gender'];
         $_SESSION['regno'] = $row['unregno'];
-        header("Location: sdashboard");
+        header("Location: supervisor/SupLandingPage.php");
 
         exit();
       }
@@ -86,7 +86,7 @@ if (isset($_POST['log'])) {
         $_SESSION['gender'] = $row['gender'];
         $_SESSION['regno'] = $row['cpregno'];
         //echo("logged in as company");
-        header("Location: cpdashboard");
+        header("Location: cpsuperv/SupLandingpage.php");
         exit();
       }
     } else {
