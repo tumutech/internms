@@ -16,6 +16,7 @@ if (isset($_POST['log'])) {
     //checking if input internee login match any records in the database
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
+        header("Location: Internee/StudentLandingPage.php");
         printf(
           $row["dob"]
         );
@@ -33,10 +34,7 @@ if (isset($_POST['log'])) {
         $_SESSION['unsupervisor'] = $row['unsuperv'];
         $_SESSION['cpsupervisor'] = $row['cpsuperv'];
         $_SESSION['image'] = $row['image'];
-
-        header("Location: Internee/StudentLandingPage.php");
-        // header("Location: Internee/OtherInterns.php");
-
+        
         exit();
       }
     } else {
