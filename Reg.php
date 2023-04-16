@@ -59,7 +59,7 @@ if (isset($_POST['register'])) {
 <html lang="en">
 
 <head>
-  <title>Project</title>
+  <title>Internship Management System</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
