@@ -20,11 +20,9 @@ if (isset($_POST['register'])) {
 
 
     $con = mysqli_query($conn, $sql);
-    if ($con) {
-      echo "Account created";
-    } else {
-      echo "error ";
-    }
+    if (!$con) {
+      echo "Error: " . mysqli_error($conn);
+  }
   }
 
   if ($role == 'University Supervisor') {
