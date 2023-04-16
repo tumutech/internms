@@ -14,15 +14,28 @@ if (isset($_POST['register'])) {
   $course = $_POST['course'];
 
   if ($role == 'Internee') {
+    // Create a MySQLi object
+$mysqli = new mysqli("localhost", "betteras_intern", "betteras_logbook", "betteras_logbook");
+
+// Check for errors
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: " . $mysqli->connect_error;
+}
+
+// Insert data into a table
+$query = "SELECT * FROM my_table";"INSERT INTO `internee` (`fname`, `lname`, `regno`, `dob`, `gender`, `status`, `image`, `Course`, `password`, `company`, `unsuperv`, `cpsuperv`, `datejoined`, `email`)
+VALUES ('$fname', '$lname', '$regno', '$dob', '$gender', '1', NULL, '$course', '$password', NULL, NULL, NULL, current_timestamp(), '$email')";
+$result = $mysqli->query($query);
+
+// Check for errors in the insert query
+if (!$result) {
+    echo "Error: " . mysqli_error($mysqli);
+}
+
+// Close the database connection
+$mysqli->close();
     
-    $sql = "INSERT INTO `internee` (`fname`, `lname`, `regno`, `dob`, `gender`, `status`, `image`, `Course`, `password`, `company`, `unsuperv`, `cpsuperv`, `datejoined`, `email`)
-     VALUES ('$fname', '$lname', '$regno', '$dob', '$gender', '1', NULL, '$course', '$password', NULL, NULL, NULL, current_timestamp(), '$email')";
 
-
-    $con = mysqli_query($conn, $sql);
-    if (!$con) {
-      echo "Error: " . mysqli_error($conn);
-  }
   }
 
   if ($role == 'University Supervisor') {
