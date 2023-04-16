@@ -85,7 +85,7 @@ if (isset($_POST['log'])) {
         $_SESSION['id'] = $row['idInternee'];
         $_SESSION['gender'] = $row['gender'];
         $_SESSION['regno'] = $row['cpregno'];
-        echo("logged in as company");
+        //echo("logged in as company");
         header("Location: cpdashboard");
         exit();
       }
