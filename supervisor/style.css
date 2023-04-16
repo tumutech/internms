@@ -1,0 +1,27 @@
+.dark{
+    background-color: black;
+    
+}
+body{
+    height:100vh;
+    background-color: #242424; 
+    color:white;
+}
+
+
+.sidebar ol{
+    list-style: none;
+    
+}
+.sidebar ol li{
+    background-color: inherit;
+    border: 3px solid ;
+    border-image: linear-gradient(256deg ,yellow,rgb(121, 118, 165)) 1;
+    background-color: #242424;
+    border-radius: 15px;
+    
+    /* border: 2px yellow solid ; */
+}
+*{
+    list-style: none;
+}
