@@ -128,7 +128,7 @@ if (isset($_POST['log'])) {
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Login</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -185,7 +185,7 @@ if (isset($_POST['log'])) {
           </div>
           <button name="log" class="btn btn-primary d-flex w-100 justify-content-center">Log In</button>
           <p class="text-white">New here<span>
-              <button name='Sign up' class="btn btn-primary d-flex w-100 justify-content-center"><a class="text-white text-decoration-none"><a href="Reg.php">Register</a></button>
+             <a href="Reg.php">Register</a>
             </span></p>
         </div>
       </div>
