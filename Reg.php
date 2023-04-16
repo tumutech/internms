@@ -23,7 +23,7 @@ if ($mysqli->connect_errno) {
 }
 
 // Insert data into a table
-$query = "SELECT * FROM my_table";"INSERT INTO `internee` (`fname`, `lname`, `regno`, `dob`, `gender`, `status`, `image`, `Course`, `password`, `company`, `unsuperv`, `cpsuperv`, `datejoined`, `email`)
+$query = "INSERT INTO `internee` (`fname`, `lname`, `regno`, `dob`, `gender`, `status`, `image`, `Course`, `password`, `company`, `unsuperv`, `cpsuperv`, `datejoined`, `email`)
 VALUES ('$fname', '$lname', '$regno', '$dob', '$gender', '1', NULL, '$course', '$password', NULL, NULL, NULL, current_timestamp(), '$email')";
 $result = $mysqli->query($query);
 
