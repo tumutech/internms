@@ -16,7 +16,7 @@ if (isset($_POST['log'])) {
     //checking if input internee login match any records in the database
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
-        header("Location: Internee/StudentLandingPage.php");
+        header("Location: /Internee/StudentLandingPage.php");
         printf(
           $row["dob"]
         );
@@ -70,7 +70,7 @@ if (isset($_POST['log'])) {
         $_SESSION['gender'] = $row['gender'];
         $_SESSION['regno'] = $row['unregno'];
         // header("Location: Internee/StudentLandingPage.php");
-        header("Location: supervisor/SupLandingPage.php");
+        header("Location: /supervisor/SupLandingPage.php");
         //  header("Location: Internee/OtherInterns.php");
 
         exit();
@@ -108,7 +108,7 @@ if (isset($_POST['log'])) {
         $_SESSION['gender'] = $row['gender'];
         $_SESSION['regno'] = $row['cpregno'];
         // header("Location: Internee/StudentLandingPage.php");
-        header("Location: cpsuperv/SupLandingPage.php");
+        header("Location: /cpsuperv/SupLandingPage.php");
         //  header("Location: Internee/OtherInterns.php");
 
         exit();

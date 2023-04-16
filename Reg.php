@@ -30,10 +30,7 @@ $result = $mysqli->query($query);
 // Check for errors in the insert query
 if (!$result) {
     echo "Error: " . mysqli_error($mysqli);
-}
-
-// Close the database connection
-$mysqli->close();
+}else echo("Account created");
     
 
   }
