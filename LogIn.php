@@ -6,7 +6,7 @@ require('./Includes/db.php');
 //handling the login form, assigning input fields to variable names
 if (isset($_POST['log'])) {
   $role = $_POST['btnradio'];
-  echo $role;
+  // echo $role;
   $email = $_POST['email'];
   $pass = $_POST['password'];
   //login for internee
@@ -16,6 +16,7 @@ if (isset($_POST['log'])) {
     //checking if input internee login match any records in the database
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
+        echo ("Logged in as student");
         
         // printf(
         //   $row["dob"]
@@ -84,6 +85,7 @@ if (isset($_POST['log'])) {
         $_SESSION['id'] = $row['idInternee'];
         $_SESSION['gender'] = $row['gender'];
         $_SESSION['regno'] = $row['cpregno'];
+        echo("logged in as company");
         header("Location: cpdashboard");
         exit();
       }
